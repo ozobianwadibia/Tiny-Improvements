@@ -1,0 +1,15 @@
+/* styling for the title */
+
+.title {
+    font-weight: 700;
+}
+
+
+/* kudos button styling */
+
+.kudos {
+    width: 10rem;
+    margin-right: 2rem;
+    position: fixed;
+    right: 0;
+}
