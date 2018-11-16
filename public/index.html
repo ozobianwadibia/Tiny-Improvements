@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tiny Improvements</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand title" href="#">Tiny Improvements</a>
-            <button class="btn btn-success kudos" data-toggle="modal" data-target=".bd-example-modal-lg" type="button">Press Here</button>
+        <nav class="row navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="col-md-6 navbar-brand title" href="#">Tiny Improvements</a>
+            <button class="col-md-6 btn btn-outline-info kudos" data-toggle="modal" data-target=".bd-example-modal-lg" type="button">Press Here</button>
         </nav>
 
         <!-- modal for the button -->
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+                <div class="modal-content modalStyle">
                     <div class="container-fluid">
                         <div class="modal-header">
                             <h5 class="modal-title">Send Kudos</h5>
@@ -32,31 +32,33 @@
                             <div class="col-md-3">
                                 <select class="custom-select">
                                 <option selected>Select Sender</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="Michael">Michael</option>
+                                <option value="Johnny">Johnny</option>
+                                <option value="Franco">Franco</option>
+                                <option value="Janet">Janet</option>
                                 </select>
                             </div>
 
                             <div class="col-md-6">
                                 <input id="input" class="form-control" type="text" placeholder="title">
                                 <br>
-                                <textarea id="textarea" class="form-control" id="ex" rows="7" placeholder="message"></textarea>
+                                <textarea id="textarea" class="form-control" rows="7" placeholder="message"></textarea>
                             </div>
 
                             <div class="col-md-3">
                                 <select class="custom-select">
                                 <option selected>Select Receiver</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="Michael">Michael</option>
+                                <option value="Johnny">Johnny</option>
+                                <option value="Franco">Franco</option>
+                                <option value="Janet">Janet</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Send Kudos</button>
+                        <button id="sendKudos" type="button" class="btn btn-primary">Send Kudos</button>
                     </div>
                 </div>
 
@@ -74,9 +76,9 @@
         </div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
