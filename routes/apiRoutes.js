@@ -17,7 +17,6 @@ module.exports = function(app) {
     // GET route for all the kudos
     app.get('/api/kudos', function(req, res) {
         Kudos.find({})
-            // .populate('User')
             .then(function(data) {
                 res.json(data);
             })
@@ -28,8 +27,6 @@ module.exports = function(app) {
 
     //POST route for creating new kudos
     app.post('/api/kudos/', function(req, res) {
-        // const senderId = req.body.senderId;
-        // const receiverId = req.body.receiverId;
         const newEntry = {
             sender: req.body.sender,
             receiver: req.body.receiver,
@@ -37,14 +34,9 @@ module.exports = function(app) {
             body: req.body.body
         }
         Kudos.create(newEntry)
-            // .then(function(kudosData) {
-            // return User.findOneAndUpdate({ _id: senderId }, { $push: { users: kudosData._id } }, { new: true });
             .then(function(newEntry) {
                 res.json(newEntry);
             })
-            // .then(function(userData) {
-            //     res.json(userData);
-            // })
             .catch(function(err) {
                 res.json(err);
             });
