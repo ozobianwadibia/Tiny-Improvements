@@ -31,9 +31,10 @@ module.exports = function(app) {
         // const senderId = req.body.senderId;
         // const receiverId = req.body.receiverId;
         const newEntry = {
+            sender: req.body.sender,
+            receiver: req.body.receiver,
             title: req.body.title,
-            body: req.body.body,
-
+            body: req.body.body
         }
         Kudos.create(newEntry)
             // .then(function(kudosData) {

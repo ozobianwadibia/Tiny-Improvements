@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tiny Improvements</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -14,7 +16,7 @@
     <div class="container">
         <nav class="row navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="col-md-6 navbar-brand title" href="#">Tiny Improvements</a>
-            <button class="col-md-6 btn btn-outline-info kudos" data-toggle="modal" data-target=".bd-example-modal-lg" type="button">Press Here</button>
+            <button class="col-md-6 col-sm-6 col-xs-6 kudos btn btn-outline-info" data-toggle="modal" data-target=".bd-example-modal-lg" type="button">Press Here</button>
         </nav>
 
         <!-- modal for the button -->
@@ -30,12 +32,14 @@
                         </div>
                         <div class="row">
                             <div class="col-md-3">
-                                <select class="custom-select">
+                                <select id="sender" class="custom-select">
                                 <option selected>Select Sender</option>
                                 <option value="Michael">Michael</option>
                                 <option value="Johnny">Johnny</option>
                                 <option value="Franco">Franco</option>
                                 <option value="Janet">Janet</option>
+                                <option value="Jonathan">Jonathan</option>
+                                <option value="Shakira">Shakira</option>
                                 </select>
                             </div>
 
@@ -46,12 +50,14 @@
                             </div>
 
                             <div class="col-md-3">
-                                <select class="custom-select">
+                                <select id="receiver" class="custom-select">
                                 <option selected>Select Receiver</option>
                                 <option value="Michael">Michael</option>
                                 <option value="Johnny">Johnny</option>
                                 <option value="Franco">Franco</option>
                                 <option value="Janet">Janet</option>
+                                <option value="Jonathan">Jonathan</option>
+                                <option value="Shakira">Shakira</option>
                                 </select>
                             </div>
                         </div>
@@ -61,9 +67,27 @@
                         <button id="sendKudos" type="button" class="btn btn-primary">Send Kudos</button>
                     </div>
                 </div>
-
             </div>
+        </div>
 
+        <!-- validation modal -->
+        <div class="modal fade" id="missingInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content bg-warning">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Missing field</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>One or more fields is missing!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- div containing the kudos -->

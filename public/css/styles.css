@@ -1,19 +1,15 @@
-/* background image for the body of the app */
+/* background for the body of the app */
 
 body {
-    background: url('../images/motivation.jpg');
     background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    font-family: 'Raleway', sans-serif;
 }
 
 
 /* styling for the title */
 
 .title {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arvo', serif;
     font-size: 1.2rem;
     letter-spacing: 0.125rem;
     pointer-events: none;
@@ -26,9 +22,9 @@ body {
 .kudos {
     width: 10rem;
     margin-right: 2rem;
+    border-radius: 2rem;
     position: fixed;
     right: 0;
-    border-radius: 2rem;
 }
 
 .modalStyle {
@@ -41,10 +37,27 @@ body {
 
 .display {
     background-color: rgba(52, 78, 10, 0.4);
+    width: 70%;
     margin: 0 auto;
-    width: 80%;
-    height: 100%;
+    margin-bottom: 1.7rem;
     text-align: center;
     color: white;
-    font-size: 1.2rem;
+    z-index: 100;
+    box-shadow: 0.625rem 0.625rem 0.3125rem #888888;
+}
+
+
+/* styling for mobile devices */
+
+@media screen and (max-width: 430px) {
+    .title {
+        letter-spacing: -0.125rem;
+        width: 100%;
+        text-align: left;
+    }
+    .kudos {
+        width: 7rem;
+        border-radius: 1rem;
+        text-align: center;
+    }
 }
