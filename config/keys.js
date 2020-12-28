@@ -1,4 +1,7 @@
-// the format below
-// mongodb://<dbuser>:<dbpassword>@ds113134.mlab.com:13134/kudos_db
+// use the format below for the connection string
 
-module.exports = 'mongodb://kudos_db:+W35gCh((cm(@ds113134.mlab.com:13134/kudos_db'
+// mongodb+srv://<database name on Atlas>:<password>@cluster0.ekb8f.mongodb.net/<dbname (anything here)>?retryWrites=true&w=majority
+
+const connectionString = `mongodb+srv://${process.env.DB_PROJECTNAME}:${process.env.DB_PASSWORD}@cluster0.ekb8f.mongodb.net/${process.env.DB_USERNAME}?retryWrites=true&w=majority`;
+
+module.exports = connectionString;

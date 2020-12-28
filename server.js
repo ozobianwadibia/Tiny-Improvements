@@ -1,6 +1,8 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const MONGODB_URI = require('./config/keys');
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+dotenv.config();
+const MONGODB_URI = require("./config/keys");
 
 const PORT = process.env.PORT || 3000;
 
@@ -11,11 +13,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //the database the app is connecting to
-mongoose.connect(MONGODB_URI || 'mongodb://localhost/tinyImprovements', { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-require('./routes/apiRoutes')(app);
+require("./routes/apiRoutes")(app);
 
-
-app.listen(PORT, function() {
-    console.log(`App running on port ${PORT}`);
+app.listen(PORT, function () {
+  console.log(`App running on port ${PORT}`);
 });
