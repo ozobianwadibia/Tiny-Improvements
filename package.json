@@ -14,9 +14,9 @@
   "author": "Ozobia Nwadibia",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.16.4",
-    "mongoose": "^5.7.9"
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.2"
   },
   "bugs": {
     "url": "https://github.com/ozobianwadibia/tiny-improvements/issues"
